@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "src",
+    "outDir": "dist",
+
+    // Environment Settings
+    "target": "ES2022", // good balance for Electron (Node 18+)
+    "module": "CommonJS", // Electron main process works best with CommonJS
+    "moduleResolution": "node",
+    "lib": ["ES2022"],
+    "types": ["node", "electron"], // enable Electron + Node typings
+
+    // Other Outputs
+    "sourceMap": true,
+
+    // Stricter Typechecking Options
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options (enable gradually if you want strict linting)
+    // "noImplicitReturns": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+
+    // Build Performance
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
